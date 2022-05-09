@@ -2,19 +2,19 @@ package main
 
 import "fmt"
 
+// Принимает массив и элемент, который нужно найти. Обычный бинарный поиск.
 func search(arr []int, target int) int {
 	var l int
 	r := len(arr) - 1
 
 	for l <= r {
 		mid := (l + r) / 2
-
 		switch {
 		case arr[mid] == target:
 			return mid
-		case arr[mid] > target:
+		case target < arr[mid]:
 			r = mid - 1
-		case arr[mid] < target:
+		case target > arr[mid]:
 			l = mid + 1
 		}
 	}

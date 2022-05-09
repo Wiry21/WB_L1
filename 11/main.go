@@ -25,8 +25,8 @@ func Intersection(a, b []int) (c []int) {
 }
 
 func main() {
-	a := []int{1, 2, 3, 4, 5, 6}
-	b := []int{4, 5, 6}
+	a := []int{4, 6, 5, 1, 3, 2}
+	b := []int{5, 6, 4}
 	result := Intersection(a, b)
 	fmt.Println(a)
 	fmt.Println(b)

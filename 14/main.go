@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Принимает на вход интерфейс i, печатает тип данных.
 func checkType(i interface{}) {
 	switch v := i.(type) {
 	case int:

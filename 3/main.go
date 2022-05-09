@@ -5,14 +5,14 @@ import (
 	"sync"
 )
 
-// Принимает число "i", сумму s и waitgroup wg, считает квадрат числа и выводит.
+// Принимает число "i", сумму s и waitgroup wg, считает квадрат числа.
 func square(i int, s *int, wg *sync.WaitGroup) {
 	*s += i * i
 	wg.Done()
 }
 
 func main() {
-	// Создаем массив int и переменную s, в которую запишем сумму.
+	// Создаем массив ints и s, в которую запишем сумму.
 	ints := []int{2, 4, 6, 8, 10}
 	var s int
 	var w sync.WaitGroup

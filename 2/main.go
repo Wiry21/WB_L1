@@ -12,11 +12,11 @@ func square(i int, wg *sync.WaitGroup) {
 }
 
 func main() {
-	// Создаем массив int.
+	// Создаем массив int и waitgroup w.
 	ints := []int{2, 4, 6, 8, 10}
 	var w sync.WaitGroup
-
-	for _, v := range ints { // Выполняем горутину.
+	// Выполняем горутину.
+	for _, v := range ints {
 		w.Add(1)
 		go square(v, &w)
 	}

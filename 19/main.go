@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// Итерируемся по строке сначала до конца, к новому символу прибавляем те, что уже прошли.
+// Итерируемся по строке от начала до конца, к новому символу прибавляем те, что уже прошли.
 func reverse(str string) (result string) {
 	for _, v := range str {
 		result = string(v) + result

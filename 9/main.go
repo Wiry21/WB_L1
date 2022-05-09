@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Принимает массив и канал, в который будет записывать числа из массива.
 func in(arr []int, ch1 chan int) {
 	defer close(ch1)
 	for _, val := range arr {
@@ -9,6 +10,7 @@ func in(arr []int, ch1 chan int) {
 	}
 }
 
+// Принимает данные из канала ch1 и записывает в канал ch2.
 func out(ch2 chan int, ch1 chan int) {
 	defer close(ch2)
 	for val := range ch1 {

@@ -19,10 +19,10 @@ func createHugeString(size int) (s string) {
 }
 
 func somefunc() {
-	v := createHugeString(1 << 10)
-	r := []rune(v)
+	s := createHugeString(1 << 10)
+	r := []rune(s)
 
-	justString = string(v[:5])
+	justString = string(s[:5])
 	justStringRune := string(r[:5])
 
 	fmt.Println(justString)

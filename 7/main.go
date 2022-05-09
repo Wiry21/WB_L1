@@ -16,7 +16,7 @@ func write(m map[int]int, i int, wg *sync.WaitGroup, mu *sync.Mutex) {
 }
 
 func main() {
-	// Создаем map m, waitgroup wg и mutex.
+	// Создаем map m, waitgroup wg и mutex mu.
 	m := make(map[int]int)
 	wg := sync.WaitGroup{}
 	mu := sync.Mutex{}

@@ -14,6 +14,6 @@ func main() {
 		arr = append(arr, tempstr[i])
 
 	}
-	fmt.Println("Строка до переворота", str)
-	fmt.Println("Строка после переворота ", strings.Join(arr, " "))
+	fmt.Println("Строка до переворота: ", str)
+	fmt.Println("Строка после переворота: ", strings.Join(arr, " "))
 }
